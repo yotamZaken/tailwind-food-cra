@@ -34,14 +34,14 @@ const HeaderCartButton = props => {
 
     return (
         // <button className={btnClasses} onClick={props.onClick}>
-        <button className={`cursor-pointer border-none bg-slate-800 text-white py-3 px-12 flex justify-around items-center rounded-3xl font-bold hover:bg-black active:bg-black ${btnIsHighlighted ? 'animate-bump' : ''}`} onClick={props.onClick}>
+        <button className={`cursor-pointer border-none bg-slate-800 hover:bg-black active:bg-black text-white py-3 px-12 flex justify-around items-center rounded-3xl font-bold ${btnIsHighlighted ? 'animate-bump' : ''}`} onClick={props.onClick}>
             {/*<span className={classes.icon}>*/}
             <span className={'w-5 h-5 mr-2'}>
                 <CartIcon/>
             </span>
             <span>Your Cart</span>
             {/*<span className={classes.badge}>{numberOfCartItems}</span>*/}
-            <span className={'bg-amber-700 py-1 px-4 rounded-3xl ml-4 font-bold'}>{numberOfCartItems}</span>
+            <span className={'bg-amber-700 hover:bg-amber-900 active:bg-amber-900 py-1 px-4 rounded-3xl ml-4 font-bold'}>{numberOfCartItems}</span>
         </button>
     )
 };

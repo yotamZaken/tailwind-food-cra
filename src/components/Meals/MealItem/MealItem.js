@@ -18,16 +18,19 @@ const MealItem = props => {
         })
     };
 
-    return <li className={classes.meal}>
-        <div>
-            <h3>{props.name}</h3>
-            <div className={classes.description}>{props.description}</div>
-            <div className={classes.price}>{price}</div>
-        </div>
-        <div>
-            <MealItemForm id={props.id} onAddToCart={addToCartHandler}/>
-        </div>
-    </li>
+    return (
+        // <li className={classes.meal}>
+        <li className={'flex justify-between m-4 pb-4 border border-solid border-white'}>
+            <div>
+                <h3 className={'text-2xl mb-1'}>{props.name}</h3>
+                <div className={'italic'}>{props.description}</div>
+                <div className={'mt-1 font-bold text-orange-700 text-xl'}>{price}</div>
+            </div>
+            <div>
+                <MealItemForm id={props.id} onAddToCart={addToCartHandler}/>
+            </div>
+        </li>
+    )
 };
 
 export default MealItem;

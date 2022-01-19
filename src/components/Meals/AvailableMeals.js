@@ -40,13 +40,17 @@ const AvailableMeals = () => {
         />
     ));
 
-    return <section className={classes.meals}>
-        <Card>
-            <ul>
-                {mealsList}
-            </ul>
-        </Card>
-    </section>
+    return (
+        // <section className={classes.meals}>
+        <section className={'max-w-5xl w-11/12 my-8 mx-auto animate-meals_appear'}>
+            <Card>
+                <ul className={'list-none m-0 p-0'}>
+                {/*<ul>    */}
+                    {mealsList}
+                </ul>
+            </Card>
+        </section>
+    )
 };
 
 export default AvailableMeals;
